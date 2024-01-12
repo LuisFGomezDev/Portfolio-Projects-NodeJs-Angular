@@ -1,0 +1,473 @@
+/*Importar Fuentes Custom*/
+@font-face 
+{
+    font-family: "yanone";
+    src: url(../css/fonts/yanone.ttf);
+}
+
+@font-face 
+{
+
+    font-family: "titilium";
+    src: url(../css/fonts/titilium.ttf);
+}
+
+@font-face 
+{
+    font-family: "finger";
+    src: url(../css/fonts/finger.ttf);
+}
+
+/*Estilos Generales del Proyecto*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    font-family: "yanone", Arial, Helvetica;
+    font-size: 20px;
+    background: url("../img/pattern.png");
+    background-attachment: fixed;
+    /*position: fixed;*/
+    position: inherit;
+}
+
+.clearfix
+{
+        float: none;
+        clear: both;
+}
+
+#titulo
+{
+    text-align: center;
+    margin-top: 1%;
+    color:cyan;
+}
+
+#menu
+{
+    text-align: center;
+    margin-top: auto;
+}
+
+header
+{
+    width: 100%;
+    height: 120px;
+    background-color: rgba(53,103,164,0.8);
+    position: fixed;
+    display: block;
+    text-transform: uppercase;
+}
+
+header ul
+{
+    /*display: block;*/
+    width: 50%;
+    height: inherit;
+    margin: 0px auto;
+    margin-top: -5px;
+
+}
+
+header ul li
+{
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 73px;
+
+}
+
+header a
+{
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 200ms;
+} 
+
+/*Estilo hover sostenido en la opc menu*/
+header a:hover,
+.actived
+{
+    background: cyan;
+    color: black;
+    /*background: rgba(0,0,0,0.8);*/
+}
+
+header ul li#logo a:hover
+{
+    background: transparent;
+}
+
+/****LOGOTIPO****/
+#logo
+{
+    font-family: "finger";
+}
+
+/*Efectos CSS LOGO*/
+#logo a
+{
+    transition: color 400ms, transform 400ms;
+    color: aqua;
+}
+
+
+/*Efectos CSS LOGO*/
+#logo a:hover
+{
+    background: transparent;
+    color: rgba(254, 130, 6, 0.797);
+    transform: scale(1.2,1.2);
+}
+
+/*CONTENEDOR PPAL - EFECTO 3D*/
+#content
+{
+    min-height: 600px;
+    height: auto;
+    width: 75%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 40px black;
+    border-left: 2px solid #b7b7b7;
+    background: rgba(255,255,255,0.8);
+    padding-top: 120px;
+}
+
+footer
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(7, 60, 253);
+    height: 47px;
+    margin: 0px auto;
+    width: 68%;
+    padding-left: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    line-height: 50px;
+    text-align: center;
+   
+}
+
+/***Sobre Mí***/
+#title
+{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.container h2
+{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+   
+}
+
+.container h4
+{
+    width: 70%;
+    margin: 0px auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.container .image
+{
+    float: left;
+    width: 50%;
+
+}
+
+.container .image img
+{
+    width: 90%;
+}
+
+.container .data
+{
+    float: top;
+    width: 50%;
+    margin-left: 30%;
+
+}
+
+
+
+#title h1
+{
+    font-family: "finger";
+    font-size: 45px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+#title p#web
+{
+    text-align: center;
+    margin-top: 1%;
+    color:rgb(20, 28, 250);
+    font-weight: bold; 
+    text-decoration: underline;
+}
+
+
+#title p#email
+{
+    text-align: center;
+    margin-top: 1%;
+    color:rgb(20, 28, 250);
+    font-weight: bold;
+}
+
+article.about-class
+{
+    width: 70%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+
+article.about-class h2
+{
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+article.about-class p
+{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: justify;
+}
+
+/*******ESTILOS PARA EL FORMULARIO DE ADICION PROYECTOS********/
+.container
+{
+    padding: 50px;
+    padding-top: 10px;
+    
+}
+
+.container h2
+{
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+form
+{
+    width: 50%;
+    margin: 0px auto;
+}
+
+form label
+{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+form p textarea
+{
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    display: block;
+    width: 90%;
+    height: 150px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    height: 80px;
+}
+
+.button-edit
+{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 30px;
+    color: white;
+    background: rgba(53, 103, 164, 1);
+    border: 2px solid rgba(13, 67, 133, 1);
+    cursor: pointer;
+    width: 30%;
+    text-decoration: none;
+    text-align: center;
+   
+    float: left;
+}
+
+
+.button-delete
+{
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 30px;
+    color: white;
+    background: red;
+    border: 2px solid rgba(13, 67, 133, 1);
+    cursor: pointer;
+    width: 30%;
+    text-decoration: none;
+    text-align: center;
+   
+    float: left;
+}
+
+
+
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+
+select
+{
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    width: 40%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+#button-login
+{
+    border: 1px solid blue;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: rgb(7, 60, 253);
+    height: 47px;
+    margin: 0px auto;
+    width: 68%;
+    line-height: 50px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+#button-login:hover
+{
+    background: rgb(53, 103, 164, 1);
+    color: white;
+    transform: scale(1.2,1.2);
+}
+
+
+.bx-wrapper, .bx-viewport
+{
+    height: 300px !important;
+}
+
+
+form input[disabled]
+{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+.form_error
+{
+    font-size: 18px;
+    padding: 3px;
+    background: rebeccapurple;
+    color: white;
+    margin-left: 10px;
+}
+
+.msg-success
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    width: 100%;
+    background: green;
+}
+
+.msg-success a
+{
+    color: yellow;
+}
+
+.msg-failed
+{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    width: 100%;
+    background: red;
+   
+}
+
+/*Pagina de Proyectos*/
+
+.project
+{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 55px;
+}
+
+
+.project .image
+{
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+}
+
+.project img
+{
+    width: 100px;
+
+}
+
+
+.project a
+{
+    text-decoration: none;
+    color: black;
+
+}
+
+.confirm
+{
+    display: block;
+    font-weight: bold;
+    margin-left: 10px;
+}

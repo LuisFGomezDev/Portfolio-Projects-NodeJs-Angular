@@ -1,0 +1,81 @@
+<div class="container"  *ngIf="project">
+    <h2>{{title}}</h2>
+
+    <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+        <p>
+            <label for="name">Nombre Proyecto</label>
+            <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required />
+            <span class="form_error" *ngIf="name.touched && !name.valid">
+                El Nombre es Obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="description">Descripción Proyecto</label>
+            <textarea name="description" #description="ngModel" [(ngModel)]="project.description" required></textarea>
+            <span class="form_error" *ngIf="description.touched && !description.valid">
+                La Descripción es Obligatoria
+            </span>
+        </p>
+
+        <p>
+            <label for="category">Categoría Proyecto</label>
+            <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required/>
+            <span class="form_error" *ngIf="category.touched && !category.valid">
+                La Categoría es Obligatoria
+            </span>
+        </p>
+
+        <p>
+            <label for="langs">Tecnologías y Lenguajes</label>
+            <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required/>
+            <span class="form_error" *ngIf="langs.touched && !langs.valid">
+                Este campo es Obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="year">Año Proyecto</label>
+            <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year" required/>
+            <span class="form_error" *ngIf="year.touched && !year.valid">
+                Este campo es Obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="image">Imagen Proyecto</label>
+            <input type="file" name="image" placeholder="Subir Imagen" (change)="fileChangeEvent($event)" />
+        </p>
+        &nbsp;&nbsp;
+
+        <!--
+        <span>
+            <div>
+                <p>Recorte la imagen y haga Click en Enviar</p>
+                
+                &nbsp;&nbsp;
+            <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="1 / 1"
+                [resizeToWidth]="200" [imageQuality]="100" format="png" (imageCropped)="imageCropped($event)">
+            </image-cropper>
+                    
+            <img [src]="croppedImage" />
+
+            </div>
+        </span>
+        -->
+        <h4>
+            <span>
+                <input type="submit" value="Enviar" id="button-login" [disabled]="!projectForm.form.valid"/>
+            </span>
+        </h4>
+
+        <div class="msg-success" *ngIf="status == 'success'">El Proyecto se ha creado con EXITO. Para verlo 
+               
+            <a [routerLink]="['/proyecto/',save_project._id]">haz clic Aquí</a>
+        </div>
+
+        <div class="msg-failed" *ngIf="status == 'failed'">El Proyecto No pudo GRABARSE</div>
+
+    </form>
+
+</div>

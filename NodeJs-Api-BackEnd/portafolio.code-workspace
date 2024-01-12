@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "proyecto-angular",
+			"path": "../proyecto-angular"
+		},
+		{
+			"name": "backend",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

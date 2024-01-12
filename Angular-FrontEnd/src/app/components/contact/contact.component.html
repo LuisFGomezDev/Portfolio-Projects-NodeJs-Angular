@@ -1,0 +1,64 @@
+
+<div #someInput>
+    <p [hidden]="false" appResaltado>
+        Pagina ensayando con viewChild que hace lo mismo que JQUERY
+    </p>
+</div>
+
+<div class="container">
+   <h1>Contacto Pagina Trabajando</h1>
+    
+    Tamaño Slider:
+   <input type="number" [(ngModel)]="widthSlider"/> 
+
+   <button (click)="cargarSlider()">Cargar Slider</button>
+   <button (click)="resetearSlider()">Resetear Slider</button>
+        
+        <div *ngIf="anchuraToSlider">
+                
+            <slider [anchura]="anchuraToSlider" [etiquetas]="false" (conseguirAutor)="getAutor($event)">
+            </slider>
+            
+        </div>
+</div>
+
+{{autor.nombre + " " + autor.website}}
+
+
+
+<!--
+
+<form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+    <label for="nombre">Nombre</label> <br/>
+    <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required pattern="[a-zA-Z]+"/>
+    <span *ngIf="nombre.touched && !nombre.valid">
+        El Nombre es Obligatorio
+    </span>
+    <br/>
+
+    <label for="apellidos">Apellidos</label> <br/>
+    <input type="text" name="apellidos" #apellidos="ngModel" [(ngModel)]="usuario.apellidos" required pattern="[a-zA-Z]+"/>
+    <span *ngIf="apellidos.touched && !apellidos.valid">
+        Los Apellidos son Obligatorios
+    </span>
+    <br/>
+
+
+    <label for="email">Email</label> <br/>
+    <input type="text" name="email" #email="ngModel" [(ngModel)]="usuario.email" required/>
+    <span *ngIf="email.touched && !email.valid">
+        El Email es Obligatorio
+    </span>
+    <br/>
+
+    <label for="mensaje">Mensaje</label> <br/>
+    <textarea name="mensaje" #mensaje="ngModel" [(ngModel)]="usuario.mensaje" required></textarea>
+    <span *ngIf="mensaje.touched && !mensaje.valid">
+        El Mensaje es Obligatorio
+    </span>
+    <br/>
+
+    <input type="submit" value="ENVIAR" [disabled]="!formContacto.form.valid"/>
+
+</form> 
+-->

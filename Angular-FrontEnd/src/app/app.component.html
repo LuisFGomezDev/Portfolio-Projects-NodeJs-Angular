@@ -1,0 +1,43 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<header>
+  <h2 id="titulo">Portafolio Proyectos</h2>
+
+
+  <!-- En esta Zona yo puedo crear un MENU de NAVEGACION ENTRE TODAS LAS PAGINAS DEL SITIO -->
+
+  <ul id="menu">
+    <li id="opc1">
+      <a [routerLink]="['/about']" [routerLinkActive]="['actived']">Acerca de Mí</a>
+    </li>
+
+    <li>
+      <a [routerLink]="['/projects']" [routerLinkActive]="['actived']">Mis Proyectos</a>
+    </li>
+
+    <li id = "logo"><a>Software Engineer</a></li>
+    
+    <li>
+      <!--<a [routerLink]="['/create-project']" [routerLinkActive]="['actived']">Nuevo Proyecto</a>-->
+      <a [routerLink]="['/users']" [routerLinkActive]="['actived']">Nuevo Proyecto</a>
+    </li>
+
+    <li>
+      <a [routerLink]="['/contact']" [routerLinkActive]="['actived']">Contacto</a>
+    </li>
+</ul>
+</header>
+
+<section id="content">
+
+  <router-outlet></router-outlet>
+
+</section>
+
+<hr>
+
+<footer>
+  FullStack Developer Web
+</footer>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

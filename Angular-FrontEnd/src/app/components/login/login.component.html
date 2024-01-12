@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>{{title}}</h2>
+
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+        <p>
+            <label for="email">Email User</label>
+            <input type="text" name="email" #email="ngModel" [(ngModel)]="user.email" required />
+            <span class="form_error" *ngIf="email.touched && !email.valid">
+                El Email es Obligatorio
+            </span>
+        </p>
+
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" required>
+            <span class="form_error" *ngIf="password.touched && !password.valid">
+                La Clave es Obligatoria
+            </span>
+        </p>
+        
+        
+        <h4>
+            <span>
+                <input type="submit" value="Login" id="button-login" [disabled]="!userForm.form.valid"/>
+            </span>
+        </h4>
+
+        <div class="msg-success" *ngIf="status == 'success'">Usuario Autorizado
+        </div>
+
+        <div class="msg-failed" *ngIf="status == 'failed'">Datos Incorrectos</div>
+
+    </form>
+
+</div>
